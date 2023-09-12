@@ -1,0 +1,399 @@
+﻿
+
+.field-validation-error {
+    color: var(--bs-danger);
+}
+
+.form-floating-group input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+body::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+body {
+    overflow-y: inherit;
+    overflow-x: hidden;
+    background-color: #5c87b2;
+    margin: 0 calc((100vw - 100%)*-1.0) 0 0;
+    padding: 0 !important;
+    color: #696969;
+}
+
+#page {
+    width: 90%;
+    min-width: 667px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*possibilita exibir um ícone com cor desabilitada (transparen
+        * te)*/
+.fa-disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#main {
+    padding: 30px 30px 15px 30px;
+    background-color: azure;
+    margin-top: 30px;
+    /*margin-bottom: 30px;*/
+    min-height: 600px;
+    /*CSS3 properties*/
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#footer {
+    padding: 30px 0 15px 30px;
+    background-color: azure;
+    margin-bottom: 60px;
+    /*CSS3 properties*/
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+/*aplica readonly num select com a propriedade readonly="readonly"*/
+select[readonly] {
+    background: #eee;
+    pointer-events: none;
+    touch-action: none;
+}
+
+/*para ser usado com spinner (loading)
+           Exemplo: <span class="spinner-border spinner-border-sm" role="status"></span>
+           */
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-border {
+    display: none; /*inline-block*/
+    /*
+               margin: 0 10px 0 10px;
+               margin-left: 10px;
+               margin-right: 10px;
+           }
+           .spinner-border span{
+               display: inline-block;
+               width: 2rem;
+               height: 2rem;
+               vertical-align: text-bottom;
+               border: .25em solid currentColor;
+               border-right-color: transparent;
+               border-radius: 50%;
+               -webkit-animation: spinner-border .75s linear infinite;
+               animation: spinner-border .75s linear infinite;
+           }
+           .spinner-border-sm span{
+               height: 1rem;
+               width: 1rem;
+               border-width: .2em;*/
+}
+
+/*faz um ícone piscar*/
+.blink {
+    -webkit-animation: blink 1s steps(5, start) infinite;
+    animation: blink 2s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/*AJAX LOADING ANIMATION*/
+/* Start by setting display:none to make this hidden.
+              Then we position it in relation to the viewport window
+              with position:fixed. Width, height, top and left speak
+              for themselves. Background we set to 80% white with
+              our animation centered, and no-repeating */
+.ajaxLoadingModal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('/Images/loading.gif') 50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+              the scrollbar off with overflow:hidden */
+body.loading .ajaxLoadingModal {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+              modal element will be visible */
+body.loading .ajaxLoadingModal {
+    display: block;
+}
+
+.container-fluid {
+    padding: 50px;
+}
+
+:root {
+    --btn-primary-bg: #337ab7;
+}
+
+.adminActions {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+}
+.adminButton {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(67, 83, 143, .8);
+    border-radius: 50%;
+    display: block;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.adminButton i {
+    font-size: 22px;
+}
+.adminButtons {
+    position: absolute;
+    width: 100%;
+    bottom: 120%;
+    text-align: center;
+}
+.adminButtons a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 10px auto 0;
+    line-height: 1.15;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    box-shadow: 0 0 5px 1px rgba(51, 51, 51, .3);
+}
+.adminButtons a:hover {
+    transform: scale(1.05);
+}
+.adminButtons a:nth-child(1) {
+    background-color: #ff5722;
+    transition: opacity .2s ease-in-out .3s, transform .15s ease-in-out;
+}
+.adminButtons a:nth-child(2) {
+    background-color: #03a9f4;
+    transition: opacity .2s ease-in-out .25s, transform .15s ease-in-out;
+}
+.adminButtons a:nth-child(3) {
+    background-color: #f44336;
+    transition: opacity .2s ease-in-out .2s, transform .15s ease-in-out;
+}
+.adminButtons a:nth-child(4) {
+    background-color: #4CAF50;
+    transition: opacity .2s ease-in-out .15s, transform .15s ease-in-out;
+}
+.adminActions a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.adminToggle {
+    -webkit-appearance: none;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: 0 3px 5px 1px rgba(51, 51, 51, .3);
+}
+.adminToggle:hover {
+    box-shadow: 0 3px 6px 2px rgba(51, 51, 51, .3);
+}
+.adminToggle:checked ~ .adminButtons a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.table-hover tbody tr {
+    cursor: pointer;
+}
+
+/*
+<a href="" class="btn-float" onclick="return editAta()" > <span class="glyphicon glyphicon-plus" > </span > </a >
+*/
+/*floating anchor*/
+.btn-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #337ab7;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    padding: 20px;
+}
+
+.form-control {
+   max-width:100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.breadcrumbs {
+    margin: 25px 0px 0px;
+    padding: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+    height: 40px;
+}
+
+    ul.breadcrumbs li {
+        position: relative;
+        margin: 0px 0px;
+        padding: 0px;
+        list-style: none;
+        list-style-image: none;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: top;
+        border-left: 1px solid #ccc;
+        transition: 0.3s ease;
+    }
+
+        ul.breadcrumbs li:hover:before {
+            border-left: 10px solid var(--bs-blue);
+        }
+
+        ul.breadcrumbs li:hover a {
+            color: var(--bs-light);
+            background: var(--bs-blue); /* #96be11; */
+        }
+
+        ul.breadcrumbs li:before {
+            content: "";
+            position: absolute;
+            right: -9px;
+            top: -1px;
+            z-index: 20;
+            border-left: 10px solid #fff;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        ul.breadcrumbs li:after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -1px;
+            z-index: 10;
+            border-left: 10px solid #ccc;
+            border-top: 22px solid transparent;
+            border-bottom: 22px solid transparent;
+        }
+
+        ul.breadcrumbs li.active a {
+            color: var(--bs-light);
+            background: var(--bs-blue);
+        }
+
+        ul.breadcrumbs li.first {
+            border-left: none;
+        }
+
+            ul.breadcrumbs li.first a {
+                font-size: 18px;
+                padding-left: 20px;
+                border-radius: 5px 0px 0px 5px;
+            }
+
+        ul.breadcrumbs li.last:before {
+            display: none;
+        }
+
+        ul.breadcrumbs li.last:after {
+            display: none;
+        }
+
+        ul.breadcrumbs li.last a {
+            padding-right: 20px;
+            border-radius: 0px 40px 40px 0px;
+        }
+
+        ul.breadcrumbs li a {
+            display: block;
+            font-size: 12px;
+            line-height: 40px;
+            color: #757575;
+            padding: 0px 15px 0px 25px;
+            text-decoration: none;
+            background: #fff;
+            border: 1px solid #ddd;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }

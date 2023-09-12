@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProdutoModel>
+
+@{
+    ViewBag.Title = "Home - RS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <button class="btn btn-primary" href="/Produto/ProdutoNew">Novo Produto</button>
+
+    <table class="table table-hover table-stripped w-75">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Descrição</td>
+                <td>Quant</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach(ProdutoModel pm in Model) {
+            <tr>
+                <td>@pm.IdProduto</td>
+                <td>@pm.Descricao</td>
+                <td>@pm.Quantidade.ToString("d2")</td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+
+
+

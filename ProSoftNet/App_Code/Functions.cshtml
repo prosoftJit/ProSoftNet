@@ -1,0 +1,10 @@
+﻿@{
+    Func<Dictionary<string, string>, object> Breadcrumb =@<ul class="breadcrumbs mb-4">
+        <li class="first"><a href="#"><i class="fa fa-house"></i></a></li>
+            @for(int i = 1; i < item.Count() -1; i++)
+            {
+            <li><a href="@item.Values.ElementAt(i)">@item.Keys.ElementAt(i)</a></li>
+            }
+       <li class="last active"><a href="#">@item.Keys.Last()</a></li>
+    </ul>;
+}
